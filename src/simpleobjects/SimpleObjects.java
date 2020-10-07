@@ -5,6 +5,9 @@
  */
 package simpleobjects;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  *
  * @author hassan
@@ -60,6 +63,42 @@ public class SimpleObjects {
          } else {
             System.out.println( "Contacts are not equal.");
          }
+        
+        Location l1 = new Location("London", 51.528308, -0.3817765);
+        Location l2 = new Location("Paris", 48.8587741, 2.2069771);
+        Location l3 = new Location("Paris", 48.8587741, 2.2069771);
+        Location l4 = l1;
+        Location l5 = l2;
+        Location l6 = l5;
+        
+        System.out.println();
+        
+        System.out.println(l1.equals(l2));
+        System.out.println(l1.equals(l4));
+        System.out.println(l2.equals(l6));
+        System.out.println(l2.equals(l3));
+
+        //System.out.println(l1);
+        System.out.println();
+        
+        Set<Object> set = new HashSet<>();
+        set.add(l1);
+        set.add(l2);
+        set.add(l3);
+          
+        AirborneLocation aL1 = new AirborneLocation("New York", 40.6976701, -74.2598637, 900);
+        set.add(aL1);
+        
+        Location l7 = new Location("New York", 40.6976701, -74.2598637);
+        set.add(l7);
+          
+        for(Object loc : set) {
+            System.out.println(loc);
+        }
+        System.out.println();
+        
+        System.out.println(l7.equals(aL1));
+        
     }
     
 }

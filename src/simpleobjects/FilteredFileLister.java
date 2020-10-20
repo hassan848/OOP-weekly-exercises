@@ -19,6 +19,7 @@ public class FilteredFileLister extends FileLister {
     
     public FilteredFileLister(File folderToList, String extension) {
         super(folderToList);
+        this.extension = extension;
     }
     
     @Override

@@ -28,8 +28,8 @@ public class FileListerDemo {
         lister = new RecursiveFileLister( targetFolder);
         lister.display();
 
-        lister = new FilteredRecursiveFileLister1(targetFolder, ".xml");
-        lister.display();
+        //lister = new FilteredRecursiveFileLister1(targetFolder, ".xml");
+        //lister.display();
         
     }
     
